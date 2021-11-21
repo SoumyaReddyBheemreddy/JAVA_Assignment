@@ -1,0 +1,8 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(øºÑûúÿÿÿÿ
+[
+java:S1854
+"FRemove this useless assignment to local variable "constructorStrings".(„µ¾/
+L
+java:S1481
+"7Remove this unused "constructorStrings" local variable.(„µ¾/
