@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args){
         File directory = new File("/home/soumbr/Documents/");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter file to search to exit enter end to exit");
+        System.out.println("Enter file to search (or) enter end to exit");
         String input = sc.nextLine();
         while (!input.equals("end")){
                 search(directory,input);
-                System.out.println("Enter file to search to exit enter end to exit");
+                System.out.println("Enter file to search (or) enter end to exit");
                 input = sc.nextLine();
         }
     }

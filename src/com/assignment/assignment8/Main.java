@@ -12,8 +12,9 @@ public class Main {
         studentNames.add("Sam");
         studentNames.add("John");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your student name");
+        System.out.println("Enter your name");
         String studentName = scanner.nextLine();
+        System.out.println("Enter your designation name");
         String designation = scanner.nextLine().toLowerCase();
         try{
             if(!designation.equals("student")){
@@ -35,6 +36,9 @@ public class Main {
         }
         catch (UnregisterStudent exception){
             System.out.println(exception.getMessage());
+        }
+        finally {
+            System.out.println("In finally");
         }
     }
 }

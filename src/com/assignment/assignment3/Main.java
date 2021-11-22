@@ -38,6 +38,7 @@ public class Main {
             outputLine = input.readLine();
             numberOfSteps--;
         }
+        process.destroy();
         Collections.sort(times);
         if(times.size()%2!=0){
             System.out.println("Median is : "+times.get((times.size()-1)/2));
