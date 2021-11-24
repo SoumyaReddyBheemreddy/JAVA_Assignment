@@ -3,17 +3,24 @@ package com.assignment.assignment10;
 public class SListIterator<T> {
     private Node<T> head;
     private  Node<T> tail;
-
+    private Node<T> current;
     SListIterator(Node<T> list){
          head  = list;
-
+    }
+    public boolean hasNext(){
+        return current!=null;
+    }
+    public T next(){
+        T value = current.value;
+        current = current.next;
+        return value;
     }
     public void insert(T value){
        Node node = new Node(value);
         if(head == null){
             head = node;
             tail = node;
-
+            current = head;
         }
         else {
             tail.next = node;
@@ -21,21 +28,15 @@ public class SListIterator<T> {
         }
     }
     public void remove(){
-        if (head==null)
-            return;
-      else {
-          if(head!=tail){
-              Node<T> current = head;
-              while(current.next != tail) {
-                  current = current.next;
-              }
-              tail = current;
-              tail.next = null;
-          }
-          else {
-              head = tail = null;
-          }
+        if(head.next == null){
+            head = null;
+            current = null;
         }
+        else {
+            head = head.next;
+            current = current.next;
+        }
+
     }
     public void display(){
         Node<T> node = head;

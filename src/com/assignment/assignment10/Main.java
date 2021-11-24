@@ -12,10 +12,11 @@ public class Main {
         listIterator.insert(60);
         listIterator.remove();
         listIterator.remove();
-
         listIterator.insert(70);
         listIterator.insert(80);
-       listIterator.display();
+        while (listIterator.hasNext()){
+            System.out.println(listIterator.next());
+        }
 
     }
 
